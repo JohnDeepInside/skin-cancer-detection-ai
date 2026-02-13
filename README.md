@@ -108,6 +108,41 @@ skin-cancer-detection-ai/
 
 -----
 
+## How to use
+
+### Training
+```bash
+python train.py
+
+python predict.py path/to/lesion_image.jpg
+
+============================================================
+Image: sample_lesion.jpg
+============================================================
+
+Prediction: MEL
+Description: Melanoma (malignant)
+Confidence: 78.34%
+
+All class probabilities:
+akiec   3.21% █
+bcc     5.67% ██
+bkl     4.89% ██
+df      1.23% 
+mel    78.34% ███████████████████████████████████████
+nv      5.12% ██
+vasc    1.54% 
+
+============================================================
+⚠️  WARNING: Melanoma detected!
+   Consult a dermatologist immediately.
+============================================================
+
+
+Commit message: `Add usage instructions`
+
+
+
 ## Tech stack
 
 - Python 3.12
