@@ -75,6 +75,28 @@ The slight overfitting after epoch 5 is expected with complex medical data. 84% 
 
 -----
 
+## Model Performance Analysis
+
+### Confusion Matrix
+
+![Confusion Matrix](https://github.com/JohnDeepInside/skin-cancer-detection-ai/raw/main/confusion_matrix.png)
+
+### Per-Class Performance
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| akiec | 0.58 | 0.86 | 0.69 | 65 |
+| bcc | 0.61 | 0.81 | 0.70 | 103 |
+| bkl | 0.65 | 0.76 | 0.70 | 220 |
+| df | 0.56 | 1.00 | 0.72 | 23 |
+| **mel (melanoma)** | **0.55** | **0.76** | **0.64** | **223** |
+| nv | 0.97 | 0.82 | 0.88 | 1341 |
+| vasc | 0.74 | 0.89 | 0.81 | 28 |
+
+**Key insight:** The model achieves 76% recall on melanoma detection, meaning it catches 3 out of 4 melanomas. In medical screening, high recall is more important than precision — better to flag a benign lesion for review than miss a cancer.
+
+---
+
 ## Project structure
 
 ```
